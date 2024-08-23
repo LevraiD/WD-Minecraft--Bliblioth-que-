@@ -3,10 +3,35 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Affichage Bibliothèque</title>
+    <title>Bibliothèque Défilante</title>
+    <style>
+        /* Styles pour le texte défilant */
+        .marquee {
+            font-size: 50px; /* Taille du texte */
+            font-weight: bold; /* Texte en gras */
+            color: #333; /* Couleur du texte */
+            overflow: hidden; /* Masque le texte qui déborde */
+            white-space: nowrap; /* Empêche le retour à la ligne */
+            box-sizing: border-box;
+            animation: marquee 10s linear infinite; /* Animation continue */
+        }
+
+        /* Animation de défilement */
+        @keyframes marquee {
+            0% {
+                transform: translateX(100%); /* Commence hors de l'écran à droite */
+            }
+            100% {
+                transform: translateX(-100%); /* Finit hors de l'écran à gauche */
+            }
+        }
+    </style>
 </head>
 <body>
-    <marquee>Bibliothèque</marquee>
+
+    <div class="marquee">Bibliothèque</div>
+
 </body>
 </html>
+
 
