@@ -3,28 +3,43 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Bibliothèque</title>
+    <title>Bibliothèque Défilante</title>
     <style>
-        .centered-text {
+        .marquee-container {
+            width: 100%;
+            overflow: hidden;
+            background-color: #f4f4f4;
+            border: 1px solid #ccc;
+        }
+
+        .marquee-text {
+            display: inline-block;
             font-size: 50px;
             font-weight: bold;
             color: #333;
-            display: flex;
-            justify-content: center;
-            align-items: center;
-            height: 100vh;
-            margin: 0;
+            white-space: nowrap;
+            animation: marquee 10s linear infinite;
+        }
+
+        @keyframes marquee {
+            from {
+                transform: translateX(100%);
+            }
+            to {
+                transform: translateX(-100%);
+            }
         }
     </style>
 </head>
 <body>
 
-    <div class="centered-text">
-        Bibliothèque
+    <div class="marquee-container">
+        <div class="marquee-text">Bibliothèque</div>
     </div>
 
 </body>
 </html>
+
 
 
 
